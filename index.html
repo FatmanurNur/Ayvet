@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayvet Muhasebe</title>
+    <style>
+        form {
+            padding: 10px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        .content {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+
+            <h1 class="heading-small">Müşteri No:</h1>
+            <h2 class="heading-small">Adı Soyadı:</h2>
+            <h3 class="heading-small">Adres:</h3>
+        <hr>
+
+        <div class="content">
+
+            <div style="flex:1">
+                <form form border="1" cellpadding="10" name="toplam">
+                    B. FİYATI
+                    <input type="text" placeholder="9.20TL"> <br> <br>
+
+                    <label>01
+                        <input type="text" id="s1">
+                    </label>
+                    <label>16
+
+                        <input type="text" id="s16"> <br> <br>
+                    </label>
+                    <label> 02
+
+                        <input type="text" id="s2">
+                    </label>
+                    17
+                    <input type="text" id="s17"> <br> <br>
+                    03
+                    <input type="text" id="s3">
+                    18
+                    <input type="text" id="s18"> <br> <br>
+                    04
+                    <input type="text" id="s4">
+                    19
+                    <input type="text" id="s19"> <br> <br>
+                    05
+                    <input type="text" id="s5">
+                    20
+                    <input type="text" id="s20"> <br> <br>
+                    06
+                    <input type="text" id="s6">
+                    21
+                    <input type="text" id="s21"><br> <br>
+                    07
+                    <input type="text" id="s7">
+                    22
+                    <input type="text" id="s22"><br> <br>
+                    08
+                    <input type="text" id="s8">
+                    23
+                    <input type="text" id="s23"><br> <br>
+                    09
+                    <input type="text" id="s9">
+
+                    24
+                    <input type="text" id="s24"> <br> <br>
+                    10
+                    <input type="text" id="s10">
+                    25
+                    <input type="text" id="s25"> <br> <br>
+                    11
+                    <input type="text" id="s11">
+                    26
+                    <input type="text" id="s25"> <br> <br>
+                    12
+                    <input type="text" id="s12">
+                    27
+                    <input type="text" id="s27"> <br> <br>
+                    13
+                    <input type="text" id="s13">
+                    28
+                    <input type="text" id="s28"> <br> <br>
+                    14
+                    <input type="text" id="s14">
+                    29
+                    <input type="text" id="s29"> <br> <br>
+                    15
+                    <input type="text" id="s15">
+                    30
+                    <input type="text" id="s30"><br> <br>
+                    <div
+                        style="display: flex; justify-content: space-between;padding-top: 1rem; border-top: 1px solid #000">
+                        <div><span>T.litre:</span><span id="sonuç"></span></div>
+                        <div>T.Tutarı: </div>
+                        <input type="button" value="Sayıları Topla" id="hesap">
+                    </div>
+
+
+                </form>
+            </div>
+            <div style="flex:1">
+
+                <table table border="1" cellpadding="10">
+                    <caption>AY:OCAK</caption>
+                    <thead>
+                        <tr>
+                            <th>Tarih</th>
+                            <th>Ödeme Yöntemi</th>
+                            <th>Miktarı</th>
+                            <th>Birim Fiyatı</th>
+                            <th>Tutarı</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>16.03.2023</td>
+                            <td>Süt Yemi</td>
+                            <td>3</td>
+                            <td>360.00TL</td>
+                            <td> 1.060.00 TL</td>
+                        </tr>
+                        <tr>
+                            <td>20.03.2023</td>
+                            <td>Besi Yemi</td>
+                            <td>2</td>
+                            <td>310.00 TL</td>
+                            <td>620.00 TL</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+                <table table border="1" cellpadding="20">
+                    <caption>OCAK AYINA AİT BAKİYE DURUMU</caption>
+                    <thead>
+                        <tr>
+                            <th>Süt Tutarı</th>
+                            <th>Ödeme Tutarı</th>
+                            <th>Kalan Tutar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>533.60 TL</td>
+                            <td>1.700.00 TL</td>
+                            <td>-1.166.40 TL</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script>
+            var sayi1 = document.getElementById("s1");
+            var sayi2 = document.getElementById("s2");
+            var hesapBtn = document.getElementById("hesap")
+            var sonuc = document.getElementById("sonuç");
+            hesapBtn.onclick = function () {
+
+
+                var toplam = Number(sayi1.value) + Number(sayi2.value);
+                sonuc.innerHTML = toplam
+            }
+            sayi1.oninput = hesapla;
+            sayi2.oninput = hesapla;
+
+        </script>
+</body>
+
+</html>
