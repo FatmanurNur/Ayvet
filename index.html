@@ -31,7 +31,7 @@
             <div style="flex:1">
                 <form form border="1" cellpadding="10" name="toplam">
                     B. FİYATI
-                    <input type="text" placeholder="9.20TL"> <br> <br>
+                    <input type="text" placeholder="" id="s0"> <br> <br>
 
                     <label>01
                         <input type="text" id="s1">
@@ -82,7 +82,7 @@
                     11
                     <input type="text" id="s11">
                     26
-                    <input type="text" id="s25"> <br> <br>
+                    <input type="text" id="s26"> <br> <br>
                     12
                     <input type="text" id="s12">
                     27
@@ -100,10 +100,11 @@
                     30
                     <input type="text" id="s30"><br> <br>
                     <div
-                        style="display: flex; justify-content: space-between;padding-top: 1rem; border-top: 1px solid #000">
-                        <div><span>T.litre:</span><span id="sonuç"></span></div>
-                        <div>T.Tutarı: </div>
-                        <input type="button" value="Sayıları Topla" id="hesap">
+                        style="display:flex; justify-content: space-between ;padding-top: 1rem; border-top: 1px solid #000">
+                        <div><span>T.litre:</span><span id="litresonuc"></span>  L</div>
+                        <div> <span>T.Tutarı: </span> <span id="tutarsonuc"></span>  TL</div>
+                         
+                        <input type="button" value="Hesapla" id="hesap">
                     </div>
 
 
@@ -163,19 +164,80 @@
         </div>
 
         <script>
+            var sayi0=document.getElementById("s0");
             var sayi1 = document.getElementById("s1");
             var sayi2 = document.getElementById("s2");
+            var sayi3= document.getElementById("s3");
+            var sayi4= document.getElementById("s4");
+            var sayi5= document.getElementById("s5");
+            var sayi6= document.getElementById("s6");
+            var sayi7= document.getElementById("s7");
+            var sayi8= document.getElementById("s8");
+            var sayi9= document.getElementById("s9");
+             var sayi10= document.getElementById("s10");
+             var sayi11= document.getElementById("s11");
+            var sayi12= document.getElementById("s12");
+             var sayi13= document.getElementById("s13");
+             var sayi14= document.getElementById("s14");
+             var sayi15= document.getElementById("s15");
+             var sayi16= document.getElementById("s16");
+            var sayi17= document.getElementById("s17");
+            var sayi18= document.getElementById("s18");
+            var sayi19= document.getElementById("s19");
+            var sayi20= document.getElementById("s20");
+            var sayi21= document.getElementById("s21");
+             var sayi22= document.getElementById("s22");
+             var sayi23= document.getElementById("s23");
+             var sayi24= document.getElementById("s24");
+             var sayi25= document.getElementById("s25");
+             var sayi26= document.getElementById("s26");
+            var sayi27= document.getElementById("s27");
+            var sayi28= document.getElementById("s28");
+            var sayi29= document.getElementById("s29");
+            var sayi30= document.getElementById("s30");
             var hesapBtn = document.getElementById("hesap")
-            var sonuc = document.getElementById("sonuç");
+            var sonuc = document.getElementById("litresonuc");
+            var sonuc = document.getElementById("tutarsonuc");
             hesapBtn.onclick = function () {
 
 
-                var toplam = Number(sayi1.value) + Number(sayi2.value);
-                sonuc.innerHTML = toplam
+                 var toplam = Number(sayi1.value) + Number(sayi2.value)+Number(sayi3.value)+Number(sayi4.value)+Number(sayi5.value)+Number(sayi6.value)+Number(sayi7.value)+Number(sayi8.value)+Number(sayi9.value)+Number(sayi10.value)+Number(sayi11.value)+Number(sayi12.value)+Number(sayi13.value)+Number(sayi14.value)+Number(sayi15.value)+Number(sayi16.value)+Number(sayi17.value)+Number(sayi18.value)+Number(sayi19.value)+Number(sayi20.value)+Number(sayi21.value)+Number(sayi22.value)+Number(sayi23.value)+Number(sayi24.value)+Number(sayi25.value)+Number(sayi26.value)+Number(sayi27.value)+Number(sayi28.value)+Number(sayi29.value)+Number(sayi30.value);
+                litresonuc.innerHTML = toplam
+                var carpım=Number(sayi0.value)*Number(sayi1.value)+Number(sayi0.value)*Number(sayi2.value)+Number(sayi0.value)*Number(sayi3.value)+Number(sayi0.value)*Number(sayi4.value)+Number(sayi0.value)*Number(sayi5.value)+Number(sayi0.value)*Number(sayi6.value)+Number(sayi0.value)*Number(sayi7.value)+Number(sayi0.value)*Number(sayi8.value)+Number(sayi0.value)*Number(sayi9.value)+Number(sayi0.value)*Number(sayi10.value)+Number(sayi0.value)*Number(sayi11.value)+Number(sayi0.value)*Number(sayi12.value)+Number(sayi0.value)*Number(sayi13.value)+Number(sayi0.value)*Number(sayi14.value)+Number(sayi0.value)*Number(sayi15.value)+Number(sayi0.value)*Number(sayi16.value)+Number(sayi0.value)*Number(sayi17.value)+Number(sayi0.value)*Number(sayi18.value)+Number(sayi0.value)*Number(sayi19.value)+Number(sayi0.value)*Number(sayi20.value)+Number(sayi0.value)*Number(sayi21.value)+Number(sayi0.value)*Number(sayi22.value)+Number(sayi0.value)*Number(sayi23.value)+Number(sayi0.value)*Number(sayi24.value)+Number(sayi0.value)*Number(sayi25.value)+Number(sayi0.value)*Number(sayi26.value)+Number(sayi0.value)*Number(sayi27.value)+Number(sayi0.value)*Number(sayi28.value)+Number(sayi0.value)*Number(sayi29.value)+Number(sayi0.value)*Number(sayi30.value);
+                tutarsonuc.innerHTML=carpım
+                
             }
+            sayi0.oninput=hesapla;
             sayi1.oninput = hesapla;
             sayi2.oninput = hesapla;
-
+            sayi3.oninput = hesapla;
+            sayi4.oninput = hesapla;
+            sayi5.oninput = hesapla;
+            sayi6.oninput = hesapla;
+             sayi7.oninput = hesapla;
+             sayi8.oninput = hesapla;
+            sayi9.oninput = hesapla;
+             sayi10.oninput = hesapla;
+             sayi11.oninput = hesapla;
+             sayi12.oninput = hesapla;
+             sayi13.oninput = hesapla;
+             sayi14.oninput = hesapla;
+             sayi15.oninput = hesapla;
+             sayi16.oninput = hesapla;
+             sayi17.oninput = hesapla;
+             sayi18.oninput = hesapla;
+             sayi19.oninput = hesapla;
+             sayi20.oninput = hesapla;
+             sayi21.oninput = hesapla;
+             sayi22.oninput = hesapla;
+             sayi23.oninput = hesapla;
+            sayi24.oninput = hesapla;
+             sayi25.oninput = hesapla;
+             sayi26.oninput = hesapla;
+             sayi27.oninput = hesapla;
+            sayi28.oninput = hesapla;
+            sayi29.oninput = hesapla;
+            sayi30.oninput = hesapla;
         </script>
 </body>
 
