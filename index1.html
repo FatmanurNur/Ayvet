@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      label{
+        display: block;
+      }
+      input{
+        width: 200px;
+        height: 25px;
+        font-size: 1.2rem ;
+      }
+      table{
+      background: #0984e3;
+      margin:5px;
+      width: 50%;
+      color:#fff;
+    }
+    td,th{
+      border:1px solid white;
+      border-spacing: 0px;
+      margin: 0px;
+    }
+    </style>
+</head>
+<body>
+    <div id="sayfa">
+      <label >Tarih</label> <input type="text" id="Tarih">
+      <label >Ödeme Yöntemi</label> <input type="text" id="Ödeme">
+      <label >Miktarı</label> <input type="text" id="Miktarı">
+      <label >Birim Fiyatı</label> <input type="text" id="Birim">
+      <label >Tutarı</label> <input type="text" id="Tutar">
+      <button id="ekle">Tabloya Ekle</button>
+      <table id="liste">
+        <tr>
+          <th>Tarih</th>
+          <th>Ödeme Yöntemi</th>
+          <th>Miktarı</th>
+          <th>Birim Fiyatı</th>
+          <th>Tutarı</th>
+        </tr>
+       
+
+      </table>
+    </div>
+
+    <script>
+       const tarih=document.querySelector("#Tarih");
+    const Ödeme =document.querySelector("#Ödeme");
+    const Miktarı=document.querySelector("#Miktarı");
+    const Birim =document.querySelector("#Birim");
+    const Tutarı=document.querySelector("#Tutar");
+    const ekle=document.querySelector("#ekle");
+    const liste=document.querySelector("#liste")
+    ekle.onclick=function(){
+      let tTarih=document.createElement("td");
+      let tÖdeme=document.createElement("td");
+      let tMiktarı=document.createElement("td");
+      let tBirim=document.createElement("td");
+      let tTutarı=document.createElement("td");
+
+
+      tTarih.textContent=Tarih.value;
+      tÖdeme.textContent=Ödeme.value;
+      tMiktarı.textContent=Miktarı.value;
+      tBirim.textContent=Birim.value;
+      tTutarı.textContent=Tutarı.value;
+
+
+      let tr=document.createElement("tr");
+ 
+      tr.appendChild(tTarih);
+      tr.appendChild(tÖdeme);
+      tr.appendChild(tMiktarı);
+      tr.appendChild(tBirim);
+      tr.appendChild(tTutarı);
+     
+ 
+      liste.appendChild(tr);
+
+
+      Tarih.value="";
+      Ödeme.value="";
+      Miktarı.value="";
+      Birim.value="";
+      Tutarı.value="";
+     
+      ad.focus();
+     
+    }
+
+    </script>
+</body>
+</html>
